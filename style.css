@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.heading {
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 50px;
+}
+
+.fields {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.winner {
+  margin-bottom: 20px;
+}
+
+.reset {
+  border: 1px solid black;
+  background-color: rgb(248, 248, 217);
+  color: black;
+  padding: 10px 20px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: beige;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 200px);
+}
+
+.place {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+.place:hover {
+  background-color: beige;
+}
+
+.place:first-child {
+  border-top: none;
+}
+
+.place:nth-child(2),
+.place:nth-child(3) {
+  border-top: none;
+}
+
+.place:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.place:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.place:nth-child(7),
+.place:nth-child(8) {
+  border-bottom: none;
+}
+
+.place:last-child {
+  border-bottom: none;
+}
+
+.move {
+  margin-top: 70px;
+  text-align: center;
+}
