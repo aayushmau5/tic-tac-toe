@@ -5,6 +5,7 @@ const move = document.querySelector(".move");
 
 const Gameboard = (function () {
   let sign = "X";
+  let isWon = false;
   let gameboard = ["", "", "", "", "", "", "", "", ""];
   const changeBoard = (index, value) => {
     gameboard[index] = value;
@@ -30,12 +31,13 @@ const Gameboard = (function () {
         gameboard[array[0]] === gameboard[array[1]] &&
         gameboard[array[1]] === gameboard[array[2]]
       ) {
+        isWon = true;
         winner.textContent = `Player ${gameboard[array[1]]} wins`;
         grid.removeEventListener("click", changeSign);
         return;
       }
     });
-    if (!gameboard.includes("")) {
+    if (!gameboard.includes("") && !isWon) {
       winner.textContent = "Draw";
     }
   };
@@ -58,6 +60,7 @@ const Gameboard = (function () {
   };
   const resetGame = () => {
     const place = document.querySelectorAll(".place");
+    isWon = false;
     place.forEach((grid, index) => {
       grid.textContent = "";
       gameboard[index] = "";
