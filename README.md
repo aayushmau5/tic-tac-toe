@@ -1,3 +1,3 @@
 # tic-tac-toe
 
-See [live](https://www.npmjs.com/package/handwritten.js)
+See [live](https://aayushmau5.github.io/tic-tac-toe/)
